@@ -1,24 +1,15 @@
-# README
+# book store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ERD
 
-Things you may want to cover:
+```mermaid
+erDiagram
+    PRODUCT ||--|{ REVIEW : has_many
+    PRODUCT }|--|| CATEGORY : belongs_to
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
+- `bundle install`
+- `rails db:create db:migrate`
+- `rails server`
+- open `http://localhost:3000`
